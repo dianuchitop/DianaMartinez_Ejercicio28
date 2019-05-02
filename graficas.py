@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 data = np.loadtxt("Data.dat")
 grid = np.reshape(data, (101, 200))
-print(grid)
 
 
 plt.figure()
@@ -11,5 +10,19 @@ plt.imshow(grid)
 plt.xlabel("Iteraccion")
 plt.ylabel("indice T")
 plt.colorbar(label="Temperatura")
-plt.savefig("plot.png")
+plt.savefig("plot_grad.png")
 
+
+X=[]
+Y=[]
+
+for i in range(101):
+    Y.append(grid[i][199])
+    X.append(i*0.02)
+
+
+plt.figure()
+plt.plot(X,Y)
+plt.xlabel("indice x")
+plt.ylabel("indice T")
+plt.savefig("plot_norm.png")
