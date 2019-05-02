@@ -8,7 +8,7 @@ grid = np.reshape(data, (101, 200))
 plt.figure()
 plt.imshow(grid)
 plt.xlabel("Iteraccion")
-plt.ylabel("indice T")
+plt.ylabel("Posicion")
 plt.colorbar(label="Temperatura")
 plt.savefig("plot_grad.png")
 
@@ -23,6 +23,6 @@ for i in range(101):
 
 plt.figure()
 plt.plot(X,Y)
-plt.xlabel("indice x")
-plt.ylabel("indice T")
+plt.xlabel("Posicion")
+plt.ylabel("Temperatura")
 plt.savefig("plot_norm.png")
